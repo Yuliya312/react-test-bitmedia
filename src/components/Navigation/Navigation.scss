@@ -1,0 +1,11 @@
+.nav {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 120px;
+    z-index: 4;
+  }
+
+}

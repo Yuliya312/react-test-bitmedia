@@ -1,0 +1,11 @@
+.table {
+  width: 100%;
+
+  &__head {
+    display: flex;
+  }
+
+  &__heading {
+    display: table-cell;
+  }
+}

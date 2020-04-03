@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { HomePage } from './views/HomePage/HomePage';
+import { TableUsers } from './views/TableUsers/TableUsers';
+import { UserCharts } from './views/UserCharts/UserCharts';
+import { NotFoundPage } from './components/NotFoundPage/NotFoundPage';
+
+import './App.scss';
+
+const App = () => (
+  <div className="App">
+    {/* <Header /> */}
+    <Switch>
+      <Route
+        path="/"
+        exact
+        component={HomePage}
+      />
+      <Route
+        path="/stats"
+        exact
+        component={TableUsers}
+      />
+      <Route
+        path="/charts"
+        exact
+        component={UserCharts}
+      />
+      <Route
+        path="*"
+        exact
+        component={NotFoundPage}
+      />
+    </Switch>
+  </div>
+);
 
 export default App;
+

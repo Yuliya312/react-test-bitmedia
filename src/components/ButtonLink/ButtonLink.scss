@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography";
+
+.btn {
+  display: block;
+  padding: 17px 35px;
+  color: $color-primary;
+  @extend %text;
+
+  background-color: $color-white;
+  // border: 1px solid $color-white;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s, scale 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-primary;
+    background-color: $color-white;
+  }
+
+  &:focus {
+    transform: scale(1.05);
+  }
+
+  &-link {
+    width: 154px;
+  }
+}
